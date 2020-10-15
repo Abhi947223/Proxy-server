@@ -25,7 +25,7 @@
       fputs(info->ip,stdout);  
       fputs(info->port,stdout);  
       //code to connect to main server via this proxy server  
-      int server_fd =0;  
+      int server_fd = 0;  
       struct sockaddr_in server_sd;  
       // create a socket  
       server_fd = socket(AF_INET, SOCK_STREAM, 0);  
@@ -100,9 +100,7 @@
  signal(SIGPIPE,SIG_IGN);  
       // create a socket  
       if((proxy_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0)  
-      {  
           printf("\nFailed to create socket");  
-      }  
       printf("Proxy created\n");  
       memset(&proxy_sd, 0, sizeof(proxy_sd));  
       // set socket variables  
